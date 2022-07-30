@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import './About.scss';
 import { motion } from 'framer-motion';
+import { urlFor, client } from '../../client';
 // import { AppWrap, MotionWrap } from '../../wrapper';
-// import { urlFor, client } from '../../client';
+
 
 const About = () => {
-  // const [abouts, setAbouts] = useState([]);
+  const [abouts, setAbouts] = useState([]);
 
-  // useEffect(() => {
-  //   const query = '*[_type == "abouts"]';
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
 
-  //   client.fetch(query).then((data) => {
-  //     setAbouts(data);
-  //   });
-  // }, []);
+    client.fetch(query).then((data) => {
+      setAbouts(data);
+    });
+  }, []);
 
   return (
     <>
       <h2 className="head-text">I Know that <span>Good Design</span> <br />means  <span>Good Business</span></h2>
 
-      {/* <div className="app__profiles">
+      <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
@@ -33,7 +34,7 @@ const About = () => {
             <p className="p-text" style={{ marginTop: 10 }}>{about.description}</p>
           </motion.div>
         ))}
-      </div> */}
+      </div>
     </>
   );
 };
