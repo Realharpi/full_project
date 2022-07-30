@@ -5,7 +5,6 @@ import { Navbar } from './components'
 const App = () => {
   return (
     <div className="App">
-      <h1>It's working!</h1>
       <Navbar />
       <Header />
       <About />
