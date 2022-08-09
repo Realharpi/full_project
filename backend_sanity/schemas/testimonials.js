@@ -14,8 +14,8 @@ export default {
             type: 'string'
         },
         {
-            name: 'imageurl',
-            title: 'IngURL',
+            name: 'imgurl',
+            title: 'ImgURL',
             type: 'image',
             options: {
                 hotspot: true,
