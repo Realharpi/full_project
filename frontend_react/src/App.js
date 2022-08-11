@@ -1,17 +1,18 @@
 import './App.scss';
-import { About, Footer, Header, Skills, Testimonial, Work } from './container'
+import { About, Contact, Header, Skills, Testimonial, Work } from './container'
 import { Navbar } from './components'
 
 const App = () => {
   return (
     <div className="App">
+    {/* Copywrite is in "AppWrap" inside "wrapper" */}
       <Navbar />
       <Header />
       <About />
       <Work />
       <Skills />
       <Testimonial />
-      <Footer />
+      <Contact />
     </div>
   );
 }
